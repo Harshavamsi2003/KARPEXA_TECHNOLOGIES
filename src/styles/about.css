@@ -1,0 +1,147 @@
+/* =====================================================================
+   ABOUT PAGE — bespoke "end-to-end approach" chain + closing statement.
+   Unique to /company: a horizontal connected process chain (numbered
+   chips joined by living plasma arrows) and a two-tone closing line,
+   distinct from every other pattern already on the site — the ledger
+   rows on /our-work, the vertical rungs and spine on this same page,
+   the capability cards on Home. Fully theme-aware via --title/--text/
+   --muted/--rule, so it reads correctly on whichever section theme it
+   sits in.
+   ===================================================================== */
+
+.about-full__title { margin-top: 10px; max-width: 30ch; }
+.about-full .lead + .lead { margin-top: 14px; }
+
+/* ---------- End-to-end approach: a connected chip chain ---------- */
+.flowchain-wrap {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--rule);
+}
+.flowchain-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--azure);
+  margin: 0 0 clamp(20px, 2.6vw, 30px);
+}
+.flowchain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 0;
+}
+.flowchain__unit {
+  display: flex;
+  align-items: center;
+}
+.flowchain__step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-pill);
+  background: var(--card-bg);
+  white-space: nowrap;
+  transition: border-color var(--t-mid) var(--ease), transform var(--t-mid) var(--ease);
+}
+.flowchain__step:hover {
+  border-color: var(--accent-line);
+  transform: translateY(-2px);
+}
+.flowchain__n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+  background: var(--plasma);
+  background-size: 220% 100%;
+  animation: flowGradient 6s ease-in-out infinite;
+  flex: none;
+}
+.flowchain__label {
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+/* Living arrow between steps — the same signature gradient text used
+   for the hero's emphasised word, applied to a connector this time. */
+.flowchain__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(28px, 3vw, 42px);
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: linear-gradient(100deg, var(--aqua), var(--azure), var(--violet), var(--azure), var(--aqua));
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: flowGradient 5s ease-in-out infinite;
+}
+.flowchain__arrow-v { display: none; }
+
+@media (max-width: 640px) {
+  .flowchain { flex-direction: column; align-items: flex-start; }
+  .flowchain__unit { flex-direction: column; align-items: flex-start; }
+  .flowchain__arrow { width: 26px; height: 26px; padding-left: 13px; justify-content: flex-start; }
+  .flowchain__arrow-h { display: none; }
+  .flowchain__arrow-v { display: inline; }
+}
+
+/* ---------- Closing statement: small line, then the big reveal ---------- */
+.about-closing {
+  margin-top: clamp(28px, 3.4vw, 40px);
+  padding-top: clamp(24px, 3vw, 34px);
+  border-top: 1px solid var(--rule);
+}
+.about-closing__line {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 1.22;
+}
+.about-closing__line:first-child {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.about-closing__line--em {
+  font-size: clamp(1.55rem, 3.1vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  background: var(--plasma);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: flowGradient 8s ease-in-out infinite;
+  max-width: 34ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flowchain__n { animation: none !important; }
+  .flowchain__arrow {
+    animation: none !important;
+    -webkit-text-fill-color: initial;
+    color: var(--azure);
+  }
+  .about-closing__line--em {
+    animation: none !important;
+    -webkit-text-fill-color: initial;
+    color: var(--azure);
+  }
+}

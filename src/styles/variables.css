@@ -1,0 +1,159 @@
+/* =====================================================================
+   KARPEXA — DESIGN TOKENS
+   Theme: "Obsidian & Plasma"
+   Obsidian near-black surfaces + a signature aqua → azure → violet
+   plasma gradient used sparingly for emphasis. Deliberately not a
+   generic corporate blue, and deliberately not the old green.
+   ===================================================================== */
+
+:root {
+  /* ---------- Core neutrals (dark end) ---------- */
+  --obsidian:      #05060A;   /* deepest — hero, footer */
+  --obsidian-2:    #090B12;
+  --obsidian-3:    #0E111A;   /* raised dark surface */
+  --obsidian-4:    #151926;   /* dark card */
+  --hairline-dark: rgba(255, 255, 255, 0.09);
+  --hairline-soft: rgba(255, 255, 255, 0.05);
+
+  /* ---------- Core neutrals (light end) ---------- */
+  --bone:          #FBFBFC;   /* page light */
+  --bone-2:        #F2F3F6;   /* alt light band */
+  --bone-3:        #E7E9EF;
+  --white:         #FFFFFF;
+  --hairline:      #E2E5EC;
+  --hairline-2:    #EDEFF4;
+
+  /* ---------- Ink ---------- */
+  --ink:           #070910;   /* headings on light */
+  --ink-2:         #232838;   /* body on light */
+  --ink-muted:     #5C6478;   /* muted on light */
+  --ink-faint:     #8A91A3;
+
+  --paper:         #EEF1F8;   /* headings on dark */
+  --paper-2:       #C3CADA;   /* body on dark */
+  --paper-muted:   #8E97AD;   /* muted on dark */
+
+  /* ---------- Plasma accent ---------- */
+  --aqua:          #56E7C6;
+  --azure:         #5B8CFF;
+  --violet:        #A87BFF;
+  --accent:        #5B8CFF;   /* single-colour fallback */
+  --accent-soft:   rgba(91, 140, 255, 0.14);
+  --accent-line:   rgba(91, 140, 255, 0.34);
+  --accent-ink:    #041024;   /* text on a plasma fill */
+
+  --plasma:        linear-gradient(102deg, var(--aqua) 0%, var(--azure) 48%, var(--violet) 100%);
+  --plasma-soft:   linear-gradient(102deg, rgba(86,231,198,.16) 0%, rgba(91,140,255,.16) 50%, rgba(168,123,255,.16) 100%);
+  --plasma-line:   linear-gradient(90deg, transparent, var(--azure), transparent);
+
+  /* ---------- Glass ---------- */
+  --glass-dark:    rgba(9, 11, 18, 0.72);
+  --glass-light:   rgba(255, 255, 255, 0.78);
+
+  /* ---------- Elevation ---------- */
+  --shadow-xs:  0 1px 2px rgba(7, 9, 16, 0.05);
+  --shadow-sm:  0 2px 10px rgba(7, 9, 16, 0.06);
+  --shadow-md:  0 14px 40px -18px rgba(7, 9, 16, 0.28);
+  --shadow-lg:  0 40px 90px -40px rgba(7, 9, 16, 0.42);
+  --shadow-dark:0 40px 90px -44px rgba(0, 0, 0, 0.9);
+  --glow:       0 0 0 1px var(--accent-line), 0 22px 60px -28px rgba(91, 140, 255, 0.6);
+
+  /* ---------- Type ----------
+     Font families are intentionally NOT declared here — they live in
+     their own dedicated src/styles/fonts.css so a font change never
+     requires touching this file (or any other). See fonts.css. */
+
+  --fs-hero:   clamp(2.6rem, 6.2vw, 5.1rem);
+  --fs-h1:     clamp(2.3rem, 4.8vw, 3.9rem);
+  --fs-h2:     clamp(1.85rem, 3.4vw, 2.85rem);
+  --fs-h3:     clamp(1.12rem, 1.5vw, 1.32rem);
+  --fs-lead:   clamp(1.02rem, 1.35vw, 1.24rem);
+  --fs-body:   clamp(0.955rem, 1.05vw, 1.02rem);
+  --fs-small:  0.875rem;
+  --fs-micro:  0.735rem;
+
+  /* ---------- Layout ---------- */
+  --maxw:      1280px;
+  --maxw-tight:980px;
+  --gutter:    clamp(20px, 4.6vw, 60px);
+  --nav-h:     78px;
+  --section-y: clamp(72px, 9vw, 140px);
+
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-xl: 34px;
+  --r-pill: 999px;
+
+  /* ---------- Motion ---------- */
+  --ease:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-io:   cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast:    0.22s;
+  --t-mid:     0.42s;
+  --t-slow:    0.8s;
+}
+
+/* =====================================================================
+   SECTION THEMING
+   Every <section> declares data-theme="light|tint|dark|obsidian".
+   Components read the semantic vars below, so a section can be flipped
+   between light and dark by changing one attribute.
+   ===================================================================== */
+
+[data-theme='light'] {
+  --bg: var(--white);
+  --bg-alt: var(--bone-2);
+  --surface: var(--white);
+  --surface-2: var(--bone);
+  --title: var(--ink);
+  --text: var(--ink-2);
+  --muted: var(--ink-muted);
+  --rule: var(--hairline);
+  --rule-soft: var(--hairline-2);
+  --card-bg: var(--white);
+  --card-shadow: var(--shadow-md);
+}
+
+[data-theme='tint'] {
+  --bg: var(--bone-2);
+  --bg-alt: var(--white);
+  --surface: var(--white);
+  --surface-2: var(--bone);
+  --title: var(--ink);
+  --text: var(--ink-2);
+  --muted: var(--ink-muted);
+  --rule: var(--hairline);
+  --rule-soft: var(--hairline-2);
+  --card-bg: var(--white);
+  --card-shadow: var(--shadow-md);
+}
+
+[data-theme='dark'] {
+  --bg: var(--obsidian-2);
+  --bg-alt: var(--obsidian-3);
+  --surface: var(--obsidian-3);
+  --surface-2: var(--obsidian-4);
+  --title: var(--paper);
+  --text: var(--paper-2);
+  --muted: var(--paper-muted);
+  --rule: var(--hairline-dark);
+  --rule-soft: var(--hairline-soft);
+  --card-bg: rgba(255, 255, 255, 0.035);
+  --card-shadow: var(--shadow-dark);
+}
+
+[data-theme='obsidian'] {
+  --bg: var(--obsidian);
+  --bg-alt: var(--obsidian-2);
+  --surface: var(--obsidian-3);
+  --surface-2: var(--obsidian-4);
+  --title: var(--paper);
+  --text: var(--paper-2);
+  --muted: var(--paper-muted);
+  --rule: var(--hairline-dark);
+  --rule-soft: var(--hairline-soft);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-shadow: var(--shadow-dark);
+}

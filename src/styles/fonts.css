@@ -1,0 +1,26 @@
+/* =====================================================================
+   FONTS — Option D: Plus Jakarta Sans
+   One warm, rounded family for both headings and body. Safe, modern,
+   premium without taking a strong stylistic position — the lowest-risk
+   change of the three.
+
+   HOW TO USE:
+   1. Rename this file to fonts.css and replace src/styles/fonts.css
+   2. Replace the Google Fonts <link> in index.html with the href below
+   ===================================================================== */
+
+/*
+  Matching index.html <link> — replace the existing fonts.googleapis.com
+  href with this one:
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+*/
+
+:root {
+  --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}

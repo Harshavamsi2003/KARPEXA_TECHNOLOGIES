@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#05060A" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: Space Grotesk (display), Manrope (body), JetBrains Mono (technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scroll-reveal starts at opacity 0 and is switched on by an observer.
+         Without JS the prerendered copy must still be readable. -->
+    <noscript>
+      <style>
+        .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+      </style>
+    </noscript>
+
+    <!-- Baseline metadata. scripts/prerender.mjs replaces the block below
+         with route-specific tags for every URL at build time. -->
+    <!--head-->
+    <title>Karpexa Technologies | End-to-End IT Services &amp; Digital Infrastructure</title>
+    <meta name="description" content="Karpexa Technologies delivers end-to-end IT — infrastructure, cloud, managed services, cyber security, data analytics, ERP and technology staffing." />
+    <!--/head-->
+  </head>
+  <body>
+    <div id="root"><!--app--></div>
+    <script type="module" src="/src/entry-client.jsx"></script>
+  </body>
+</html>

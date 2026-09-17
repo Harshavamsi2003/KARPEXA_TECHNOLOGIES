@@ -1,0 +1,13 @@
+{
+  "name": "Karpexa Technologies",
+  "short_name": "Karpexa",
+  "description": "Enterprise IT infrastructure for the age of AI — servers, storage, networking, security and managed services under one accountable partner.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060A",
+  "theme_color": "#05060A",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

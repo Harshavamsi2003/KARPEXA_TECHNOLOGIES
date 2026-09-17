@@ -1,0 +1,181 @@
+/* =====================================================================
+   CAPABILITY PAGE
+   ===================================================================== */
+
+/* ---- Intro + signals ---- */
+.cap__intro { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: clamp(32px,5vw,80px); align-items: start; }
+@media (max-width: 900px) { .cap__intro { grid-template-columns: 1fr; } }
+.cap__intro-body { font-size: var(--fs-lead); line-height: 1.66; color: var(--text); }
+
+.signals { display: block; border-top: 1px solid var(--rule); margin-top: 8px; }
+.signals__h {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.signals li {
+  display: block;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+/* ---- Offerings ---- */
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 18px);
+}
+@media (max-width: 1024px) { .offers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px)  { .offers { grid-template-columns: 1fr; } }
+.offer {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: clamp(24px, 2.2vw, 32px);
+  position: relative;
+  transition: border-color var(--t-mid) var(--ease), transform var(--t-mid) var(--ease);
+}
+.offer:hover { border-color: var(--accent-line); transform: translateY(-3px); }
+
+
+.offer h3 { font-size: 1.08rem; margin-bottom: 10px; }
+.offer p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+
+/* ---- Outcomes ---- */
+.outcomes { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: clamp(14px,1.6vw,22px); }
+@media (max-width: 1000px) { .outcomes { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 560px)  { .outcomes { grid-template-columns: 1fr; } }
+.outcome {
+  padding: clamp(26px,2.6vw,34px);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--t-mid) var(--ease), border-color var(--t-mid) var(--ease);
+}
+.outcome:hover { transform: translateY(-4px); border-color: var(--accent-line); }
+.outcome__stat {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem,4.2vw,3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  background: var(--plasma);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 220% 100%;
+  animation: plasmaShift 12s linear infinite;
+}
+.outcome__unit {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 12px;
+}
+.outcome h3 { font-size: 1.02rem; margin: 20px 0 8px; }
+.outcome p { color: var(--muted); font-size: 0.89rem; line-height: 1.58; }
+
+/* ---- Approach ladder ---- */
+.ladder { display: grid; gap: 0; counter-reset: rung; }
+.rung {
+  display: grid;
+  grid-template-columns: 150px minmax(0,1fr) minmax(0,1.25fr);
+  gap: clamp(16px,3vw,48px);
+  padding: clamp(24px,2.8vw,36px) 0;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+.rung:last-child { border-bottom: 1px solid var(--rule); }
+.rung::after {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0;
+  height: 1px; width: 0;
+  background: var(--plasma);
+  transition: width 0.9s var(--ease);
+}
+.rung.is-visible::after { width: 100%; }
+@media (max-width: 820px) { .rung { grid-template-columns: 1fr; gap: 10px; } }
+.rung__k {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--azure);
+  padding-top: 6px;
+}
+.rung h3 { font-size: clamp(1.12rem,1.7vw,1.36rem); letter-spacing: -0.024em; }
+.rung p { color: var(--muted); font-size: 0.95rem; line-height: 1.68; }
+
+/* ---- Deliverables + stack ---- */
+.deliv { display: grid; gap: 0; }
+.deliv li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.97rem;
+  color: var(--text);
+}
+.deliv li:first-child { border-top: 1px solid var(--rule); }
+.deliv__tick { width: 16px; height: 16px; margin-top: 3px; color: var(--aqua); }
+
+/* ---- Use cases ---- */
+.uses { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(14px,1.8vw,24px); }
+@media (max-width: 900px) { .uses { grid-template-columns: 1fr; } }
+.use {
+  padding: clamp(26px,2.6vw,34px);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+}
+.use::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 2px; width: 100%;
+  background: var(--plasma);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-mid) var(--ease);
+}
+.use:hover::after { transform: scaleX(1); }
+.use__k {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 20px;
+}
+.use h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.use p { color: var(--muted); font-size: 0.93rem; line-height: 1.62; }
+
+/* ---- Edge ---- */
+.edge { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(20px,3vw,44px); }
+@media (max-width: 900px) { .edge { grid-template-columns: 1fr; gap: 0; } }
+.edge__pt { padding-top: 26px; border-top: 1px solid var(--rule); }
+@media (max-width: 900px) { .edge__pt { padding-bottom: 26px; } }
+.edge__pt h3 { font-size: 1.08rem; margin-bottom: 10px; }
+.edge__pt p { color: var(--muted); font-size: 0.94rem; line-height: 1.66; }
+
+/* ---- Related ---- */
+.related { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(14px,1.6vw,20px); }
+@media (max-width: 820px) { .related { grid-template-columns: 1fr; } }
