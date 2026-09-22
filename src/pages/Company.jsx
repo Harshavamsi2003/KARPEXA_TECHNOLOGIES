@@ -1,10 +1,11 @@
+// src/pages/Company.jsx
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import ContactCTA from '../components/ContactCTA';
 import Partners from '../components/Partners';
 import CustomersShowcase from '../components/CustomersShowcase';
 import useReveal from '../hooks/useReveal';
-import { company, companyFacts, companyIntro, journey, values, commitments, principles, proof, partnersIntro } from '../data/content';
+import { company, companyFacts, companyIntro, approach, values, commitments, principles, proof, partnersIntro } from '../data/content';
 
 export default function Company() {
   useReveal();
@@ -115,33 +116,33 @@ export default function Company() {
         </div>
       </section>
 
-      {/* Journey */}
+      {/* Delivery — what every engagement concretely includes */}
       <section className="section" data-theme="light">
         <div className="container">
           <div className="s-head s-head--split reveal">
             <div>
-              <p className="eyebrow eyebrow--accent">Journey</p>
-              <h2>Where we are, honestly</h2>
+              <p className="eyebrow eyebrow--accent">Delivery</p>
+              <h2>What every engagement includes</h2>
             </div>
             <p className="lead">
-              We are early. We would rather say that plainly than invent two decades of history —
-              and the clients who value that tend to be the ones we work best with.
+              These are fixed parts of how we deliver, regardless of the size or scope of the
+              engagement.
             </p>
           </div>
 
-          <div className="ladder">
-            {journey.map((j) => (
-              <div className="rung reveal" key={j.phase}>
-                <span className="rung__k">{j.phase} · {j.year}</span>
-                <h3>{j.title}</h3>
-                <p>{j.text}</p>
-              </div>
+          <div className="model__grid">
+            {approach.map((a) => (
+              <article className="model__item reveal" key={a.k}>
+                <span className="model__k">{a.k}</span>
+                <h3>{a.title}</h3>
+                <p>{a.text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Standards */}
       <section className="section" data-theme="obsidian">
         <div className="aurora" aria-hidden="true"><span /><span /><span /></div>
         <div className="grain" aria-hidden="true" />
@@ -149,12 +150,12 @@ export default function Company() {
         <div className="container rel">
           <div className="s-head s-head--split reveal">
             <div>
-              <p className="eyebrow eyebrow--plain">Values</p>
-              <h2>Four things we will not trade away</h2>
+              <p className="eyebrow eyebrow--plain">Standards</p>
+              <h2>How every engagement is run</h2>
             </div>
             <p className="lead">
-              Values are only real when they cost something. Each of these has already cost us
-              revenue at least once, which is how we know they hold.
+              Operating standards applied to every engagement, independent of its size or
+              budget.
             </p>
           </div>
 
