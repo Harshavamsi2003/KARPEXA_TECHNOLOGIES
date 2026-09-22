@@ -1,3 +1,4 @@
+// vercel.json
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
@@ -5,6 +6,18 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/capabilities/cloud", "destination": "/capabilities#cloud", "permanent": true },
+    { "source": "/capabilities/security", "destination": "/capabilities#security", "permanent": true },
+    { "source": "/capabilities/managed-it", "destination": "/capabilities#managed-it", "permanent": true },
+    { "source": "/capabilities/it-infrastructure", "destination": "/capabilities#it-infrastructure", "permanent": true },
+    { "source": "/capabilities/data-analytics", "destination": "/capabilities#data-analytics", "permanent": true },
+    { "source": "/capabilities/digital-workspace", "destination": "/capabilities#digital-workspace", "permanent": true },
+    { "source": "/capabilities/erp-applications", "destination": "/capabilities#erp-applications", "permanent": true },
+    { "source": "/capabilities/tech-talent", "destination": "/capabilities#tech-talent", "permanent": true },
+    { "source": "/capabilities/maintenance-amc", "destination": "/capabilities#maintenance-amc", "permanent": true },
+    { "source": "/capabilities/managed-print", "destination": "/capabilities#managed-print", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
