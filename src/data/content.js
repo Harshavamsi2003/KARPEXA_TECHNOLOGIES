@@ -1,3 +1,4 @@
+// src/data/content.js
 /* =====================================================================
    SITE CONTENT
    Capability copy lives in src/pages/capabilities/ (one file each) and is
@@ -259,38 +260,34 @@ export const companyIntro = {
   ],
 };
 
-export const journey = [
+export const approach = [
   {
-    phase: 'Phase 01',
-    year: 'The premise',
-    title: 'A gap that kept repeating',
-    text: 'The same conversation, over and over: capable companies stuck between managing IT on goodwill and hiring an integrator whose minimum engagement exceeded their entire annual budget.',
+    k: 'Point of contact',
+    title: 'One named engineer',
+    text: 'Every engagement is assigned an engineer who knows the environment directly, rather than being routed through a rotating support queue.',
   },
   {
-    phase: 'Phase 02',
-    year: 'Now',
-    title: 'Building alongside our first clients',
-    text: 'A focused portfolio across infrastructure, cloud, security and managed operations. Small enough that every engagement gets senior attention, and documented obsessively as we go.',
+    k: 'Documentation',
+    title: 'Handed over as work happens',
+    text: 'Network diagrams, configurations and access credentials are recorded while the engagement is in progress, not reconstructed afterwards.',
   },
   {
-    phase: 'Phase 03',
-    year: 'Next',
-    title: 'Depth ahead of breadth',
-    text: 'Deepening certifications and turning what we have learned into repeatable playbooks, so the quality of an engagement never depends on which engineer answered the phone.',
+    k: 'Pricing',
+    title: 'Itemised, before work begins',
+    text: 'A written scope and line-item pricing are agreed upfront, so there are no undefined costs part-way through a project.',
   },
   {
-    phase: 'Phase 04',
-    year: 'The intent',
-    title: 'The partner clients keep',
-    text: 'The ambition is not scale for its own sake. It is a client list that renews without being chased and refers without being asked.',
+    k: 'Procurement',
+    title: 'Sourced across multiple OEMs',
+    text: 'Hardware and licensing are sourced from across our OEM partner network rather than tied to a single vendor relationship.',
   },
 ];
 
 export const values = [
-  { title: 'Judgement', text: 'We are paid for the recommendation, not the invoice. That includes the recommendation to spend less, or to do nothing yet.' },
-  { title: 'Candour', text: 'Bad news travels fast and early. A problem raised in week one is a schedule adjustment; the same problem in month four is a crisis.' },
-  { title: 'Craft', text: 'Labelled cables, named variables, written runbooks. The parts nobody sees are exactly where quality is decided.' },
-  { title: 'Continuity', text: 'We optimise for the second year of a relationship, not the first invoice. That single bias explains most of how we operate.' },
+  { title: 'Response times', text: 'Support requests are acknowledged and triaged against published response targets, not left in an unranked queue.' },
+  { title: 'Senior engineers', text: 'Engagements are staffed and led by senior engineers, not handed off to whoever is available that day.' },
+  { title: 'Change control', text: 'Changes to production systems follow a documented approval and rollback process before they are made.' },
+  { title: 'Data handling', text: 'Client credentials, configurations and data stay within agreed access boundaries, logged and auditable throughout.' },
 ];
 
 export const commitments = [
