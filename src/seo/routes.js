@@ -1,3 +1,4 @@
+// src/seo/routes.js
 /* =====================================================================
    SEO ROUTE TABLE
    One entry per URL. Used three ways:
@@ -139,6 +140,7 @@ export const websiteLd = {
   '@id': `${SITE_URL}/#website`,
   url: SITE_URL,
   name: brand.full,
+  alternateName: brand.name,
   publisher: { '@id': `${SITE_URL}/#organization` },
   inLanguage: 'en-IN',
 };
@@ -213,7 +215,7 @@ export const routes = [
     path: '/',
     title: 'IT Services Company in Bengaluru | Karpexa Technologies',
     description:
-      'IT services company in Bengaluru — infrastructure, cloud, managed IT, cyber security, data analytics, ERP and technology staffing, designed and operated by one accountable engineering team across India.',
+      'Karpexa Technologies is an IT services company in Bengaluru — infrastructure, cloud, managed IT, cyber security, data analytics, ERP and technology staffing, delivered by one accountable engineering team across India.',
     keywords: 'IT services company Bengaluru, IT company Bangalore, managed IT services Bengaluru, IT infrastructure Bangalore, IT solutions provider India',
     priority: '1.0',
     changefreq: 'weekly',
