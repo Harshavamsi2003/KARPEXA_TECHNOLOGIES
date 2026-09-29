@@ -21,34 +21,24 @@ const OG_IMAGE = `${SITE_URL}/images/og/karpexa-og.jpg`;
    Google uses them to connect the website to the business entity, which
    is what eventually produces a knowledge panel for the brand name.
 
-   LEAVE THIS ARRAY EMPTY until the profiles genuinely exist and are
-   public. A sameAs pointing at a 404 is worse than no sameAs at all.
-
-   When the client sends you the live URLs, uncomment and paste them in.
-   Nothing else in this file needs to change.
+   When the client sends more live URLs (LinkedIn, Crunchbase), uncomment
+   and paste them in. Nothing else in this file needs to change.
    --------------------------------------------------------------------- */
 export const SOCIAL_PROFILES = [
+  'https://share.google/ybnDw2ikb65nBmamH',
   // 'https://www.linkedin.com/company/karpexa-technologies',
-  // 'https://maps.app.goo.gl/XXXXXXXXXXXX',
   // 'https://www.crunchbase.com/organization/karpexa-technologies',
 ];
 
 /* ---------------------------------------------------------------------
    OFFICE COORDINATES
 
-   Used by the ProfessionalService node below so Google can place the
-   business on the map for "IT company near me" style searches.
-
-   How to get the real numbers: open Google Maps, search the office
-   address, right-click the exact pin, and the first item in the menu is
-   the latitude and longitude. Copy those two numbers in here.
-
-   The values below are the centre of HSR Layout, Bengaluru. They are
-   close but not exact. Replace them once you can confirm the pin.
+   Confirmed from the business's own Google Maps pin (Google Business
+   Profile), 29 Sep 2026. Replace only if the office ever moves.
    --------------------------------------------------------------------- */
 const OFFICE_GEO = {
-  latitude: 12.9116,
-  longitude: 77.6389,
+  latitude: 12.906812,
+  longitude: 77.6388025,
 };
 
 /* ---------- Reusable graph nodes ---------- */
@@ -213,7 +203,7 @@ const serviceLd = (c) => ({
 export const routes = [
   {
     path: '/',
-    title: 'IT Services Company in Bengaluru | Karpexa Technologies',
+    title: 'Karpexa Technologies | IT Services Company in Bengaluru',
     description:
       'Karpexa Technologies is an IT services company in Bengaluru — infrastructure, cloud, managed IT, cyber security, data analytics, ERP and technology staffing, delivered by one accountable engineering team across India.',
     keywords: 'IT services company Bengaluru, IT company Bangalore, managed IT services Bengaluru, IT infrastructure Bangalore, IT solutions provider India',
