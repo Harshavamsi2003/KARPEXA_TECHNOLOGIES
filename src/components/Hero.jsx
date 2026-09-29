@@ -1,3 +1,4 @@
+// src/components/Hero.jsx
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { heroSlides } from '../data/content';
@@ -66,6 +67,7 @@ export default function Hero() {
             </p>
 
             <h1 className="hero__title">
+              <span className="hero__brandline">Karpexa Technologies</span>
               <span className="hero__line"><span>{slide.lead}</span></span>
               <span className="hero__line"><span className="em">{slide.em}</span></span>
             </h1>
