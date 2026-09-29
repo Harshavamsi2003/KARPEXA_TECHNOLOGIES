@@ -100,6 +100,20 @@
   animation: heroLine 0.6s var(--ease) 0.28s forwards;
 }
 
+/* Small brand label set inside the H1 itself (not just the kicker
+   paragraph above it) so the company name is literally present in the
+   page's main heading, alongside the rotating creative line. */
+.hero__brandline {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(235, 240, 250, 0.6);
+  margin-bottom: 10px;
+}
+
 .hero__title {
   font-family: var(--font-display);
   font-weight: 600;
